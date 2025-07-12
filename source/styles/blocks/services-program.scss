@@ -1,0 +1,249 @@
+.services-program {
+  background-color: $secondary-background-color;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+  @media (max-width: $mobile) {
+    padding: 30px 20px 18px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 37px;
+    margin-top: 0;
+    padding: 80px 45% 53px 53px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 77px 61px 62px 52px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+}
+
+.services-program__title {
+  @include secondary-font(24px, 37px, uppercase);
+  color: #000000;
+  margin: 0;
+
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 73px;
+    padding-left: 162px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 29px;
+    padding-left: 69px;
+  }
+}
+
+.services-program__description {
+  color: $second-color-text;
+
+  @media (max-width: ($tablet - 1px)) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 700px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 700px;
+  }
+}
+
+
+.services-program__description::after {
+  @media (max-width: $mobile) {
+    content: "";
+    background-color: #d9d9d9;
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+  }
+}
+
+.services-program__link {
+  @include secondary-font(16px, 16px, uppercase);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  @include clean-list;
+  @include clean-text;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    gap: 31px;
+    line-height: 20px;
+  }
+}
+
+.services-program__link:active {
+  opacity: 0.3;
+}
+
+.services-program__link::after {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 12px;
+  background-image: url("../../icons/stack.svg#arrow");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: -8px;
+  transition: all 0.3s linear;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+
+.services-program__link:hover::after {
+  background-position: -4;
+}
+
+.services-program__link::after:active {
+  opacity: 0.3;
+}
+
+.services__weight-loss::before {
+  content: "";
+  display: block;
+  background-color: $image-background-color;
+  border-radius: 50%;
+  position: absolute;
+
+  @media (min-width: ($tablet - 1px)) {
+    top: 92px;
+    right: 63px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: ($desktop - 1px)) {
+    width: 100px;
+    height: 100px;
+    top: 49px;
+    left: 54px;
+  }
+
+  @media (max-width: ($mobile)) {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.services__weight-loss::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: ($tablet - 1px)) {
+    width: 200px;
+    height: 195px;
+    top: 81px;
+    right: 63px;
+  }
+
+  @media (min-width: ($desktop - 1px)) {
+    width: 96px;
+    height: 100px;
+    top: 41px;
+    left: 54px;
+  }
+
+  @media (max-width: ($mobile)) {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.services__weight-gain::before {
+  content: "";
+  display: block;
+  background-color: $image-background-color;
+  border-radius: 50%;
+  position: absolute;
+
+  @media (min-width: ($tablet - 1px)) {
+    top: 92px;
+    right: 63px;
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (min-width: ($desktop - 1px)) {
+    width: 100px;
+    height: 100px;
+    top: 49px;
+    left: 54px;
+  }
+
+  @media (max-width: ($mobile)) {
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.services__weight-gain::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  @media (min-width: ($tablet - 1px)) {
+    top: 92px;
+    right: 30px;
+    width: 270px;
+    height: 200px;
+  }
+
+  @media (min-width: ($desktop - 1px)) {
+    width: 133px;
+    height: 100px;
+    top: 45px;
+    left: 34px;
+  }
+
+  @media (max-width: ($mobile)) {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 15px;
+  }
+}

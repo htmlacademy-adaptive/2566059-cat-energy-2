@@ -1,0 +1,95 @@
+.button {
+  @include secondary-font(16px, 20px, uppercase);
+  color: $primary-color-text;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding: 10px 30px;
+  transition: all 0.3s;
+}
+
+.button--primary {
+  background-color: $primary-button-color;
+}
+
+.button--secondary {
+  color: $primary-color-text;
+  background-color: $second-button-color;
+}
+
+.more-catalog__button {
+  border: none;
+  width: 100%;
+}
+
+.subscribe-form__button {
+  width: 100%;
+  min-height: 56px;
+  padding: 0;
+  font-size: 20px;
+  line-height: 26px;
+  border: none;
+
+  @media (max-width: $mobile) {
+    width: 276px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 256px;
+  }
+}
+
+.button:hover,
+.button:focus {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+
+.main-catalog__card-button {
+  margin-top: 30px;
+}
+
+.button--secondary:hover,
+.button--secondary:focus {
+  background-color: #ebebeb;
+}
+
+.button--secondary:active {
+  color: rgba(68, 68, 68, 0.7);
+}
+
+
+.promo__button {
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: calc($tablet - 1px)) {
+    padding: 10px 50px;
+  }
+
+  @media (min-width: $tablet) {
+    width: 242px;
+    margin-left: 90px;
+    padding: 14px 25px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 246px;
+    margin-bottom: 1px;
+    margin-left: 80px;
+    padding: 14px 25px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (max-width: $mobile) {
+    display: block;
+    text-align: center;
+  }
+}

@@ -1,0 +1,19 @@
+.main-header {
+  border-bottom: 1px solid $secondary-background-color;
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.main-header__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

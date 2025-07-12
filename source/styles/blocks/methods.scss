@@ -1,0 +1,140 @@
+.methods__title {
+  @include secondary-font(36px, 40px);
+  color: #000000;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 39px;
+    margin-top: 23px;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 48px;
+  }
+}
+
+.methods__list {
+  @include clean-list;
+  @include clean-text;
+
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    row-gap: 37px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 324px 325px 325px 246px;
+  }
+}
+
+.methods__item {
+  position: relative;
+
+  @media (max-width: ($tablet - 1px)) {
+    display: flex;
+    gap: 20px;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 250px;
+    padding-top: 40px;
+    padding-bottom: 57px;
+    font-size: 16px;
+    line-height: 24px;
+    counter-increment: methods__item 1;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.methods__item::after {
+  content: counter(methods__item);
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: $second-font;
+  font-size: 280px;
+  line-height: 280px;
+  color: #f2f2f2;
+  z-index: -1;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.methods__item::before {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background-color: $image-background-color;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile) {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 21px;
+  }
+}
+
+.methods__item--natural::before {
+  background-image: url("../../icons/stack.svg#natural-icon");
+  background-size: 30px 32px;
+}
+
+.methods__item--cook::before {
+  background-image: url("../../icons/stack.svg#cook-icon");
+  background-size: 26px 29px;
+}
+
+.methods__item--nutrition::before {
+  background-image: url("../../icons/stack.svg#nutrition-icon");
+  background-size: 25px 30px;
+}
+
+.methods__item--result::before {
+  background-image: url("../../icons/stack.svg#result-icon");
+  background-size: 26px 31px;
+}
+
+.methods__container {
+  @media (max-width: calc($tablet - 1px)) {
+    margin: 0 20px;
+  }
+
+  @media (min-width: $tablet) {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 30px;
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin: 0 auto;
+    padding: 0 0 100px;
+    border-bottom: 1px solid #ffffff;
+  }
+}
