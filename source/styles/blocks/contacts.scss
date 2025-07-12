@@ -1,19 +1,141 @@
-.contacts {
-  background-color: $secondary-background-color;
-}
-
 .contacts__title {
   @include secondary-font(16px, 20px, uppercase);
   color: $second-color-text;
+
+  @media (max-width: $mobile) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .contacts__address {
   line-height: 20px;
   font-style: normal;
   color: $any-color-text;
+
+  @media (min-width: $tablet) {
+    width: 173px;
+    font-size: 16px;
+    padding-top: 17px;
+    padding-left: 6px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    width: 163px;
+    font-size: 16px;
+    padding-top: 17px;
+    padding-left: 6px;
+    text-align: left;
+  }
 }
 
 .contacts__map {
-  height: 362px;
+  min-height: 390px;
   border: none;
+  display: block;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+    min-height: 394px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 100%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.contacts__map-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -51vw;
+  margin-right: -50vw;
+  background: #f2f2f2;
+  grid-area: 1 / 1 / 4 / 4;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.contacts__wrapper {
+  @media (min-width: ($desktop)) {
+    grid-template-rows: 95px 1fr 106px;
+    grid-template-columns: 1fr 1220px 1fr;
+    display: grid;
+  }
+
+  @media (max-width: ($tablet)) {
+    display: block;
+  }
+
+  @media (max-width: ($mobile)) {
+    display: block;
+  }
+}
+
+.contacts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: ($tablet - 1px)) {
+    min-height: 60px;
+    padding: 26px 20px 0;
+  }
+
+  @media (min-width: $tablet) {
+    min-height: 80px;
+    column-gap: 300px;
+    padding: 48px 70px;
+  }
+
+  @media (min-width: $desktop) {
+    box-sizing: border-box;
+    z-index: 1;
+    background-color: #ffffff;
+    grid-area: 2 / 2 / 2 / 2;
+    align-self: center;
+    column-gap: 90px;
+    width: 565px;
+    padding: 32px 81px;
+    height: 190px;
+  }
+}
+
+
+.contacts--dark {
+  background-color: #f2f2f2;
+}
+
+
+.contacts__city {
+  display: block;
+  margin-top: 20px;
+
+
+  @media (max-width: $mobile) {
+    text-align: left;
+    margin-top: 0;
+  }
+
+  @media (min-width: $tablet) {
+    text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    text-align: left;
+  }
 }

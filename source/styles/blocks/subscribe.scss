@@ -1,14 +1,156 @@
 .subscribe__title {
   @include secondary-font(24px, 24px);
   color: $second-color-text;
+  position: relative;
+  background-color: #ffffff;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    width: 282px;
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 924px;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 74px;
+  }
+
+  @media (max-width: $mobile) {
+    width: fit-content;
+    box-shadow: -40px 0 #ffffff;
+    padding-right: 42px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
 }
+
+.subscribe__title::after {
+  content: "";
+  z-index: -1;
+  background-color: #68b738;
+  width: 100vw;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  box-shadow: 100vw 0 #68b738;
+
+  @media (max-width: ($tablet - 1px)) {
+    box-shadow: -40px 0 0 0 #ffffff;
+  }
+
+  @media (max-width: ($mobile)) {
+    box-shadow: 100vw 0 #68b738;
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 40px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
 
 .subscribe-form__label {
   @include secondary-font(16px, 24px);
   color: $second-color-text;
+  min-height: 50px;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+
+  @media (max-width: $mobile) {
+    width: 265px;
+  }
+
+  @media (min-width: $tablet) {
+    flex-grow: 1;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 1220px;
+    margin-bottom: 5px;
+  }
 }
 
 .subscribe-form__email {
   @include secondary-font(20px, 30px);
   color: $second-color-text;
+  box-sizing: border-box;
+  border: none;
+  outline: 1px solid #e7e7e7;
+  padding: 13px;
+
+  @media (max-width: calc($tablet - 1px)) {
+    width: 100%;
+    margin: 0 22px 16px 20px;
+  }
+
+  @media (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    width: 50%;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 500px;
+    padding-left: 17px;
+  }
+}
+
+.subscribe__form {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 38px;
+    padding-right: 25px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 34px;
+    padding-right: 31px;
+  }
+}
+
+
+.subscribe__container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 70px auto 104px;
+  box-sizing: border-box;
+  padding: 40px 20px;
+
+  @media (max-width: $mobile) {
+    margin: 0 auto 38px;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 0 30px;
+    margin: 81px auto 73px;
+  }
+
+  @media (min-width: $desktop) {
+    margin: 73px auto 113px;
+    padding: 0;
+  }
 }
