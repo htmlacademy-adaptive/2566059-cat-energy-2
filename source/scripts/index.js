@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js');
+  const contacts = document.querySelector('.contacts');
+  if (contacts) {
+    contacts.classList.add('js');
+  }
   const navToggle = document.querySelector('.main-navigation__toggle');
   const nav = document.querySelector('.main-navigation');
   const navWrapper = document.querySelector('.main-navigation__wrapper');

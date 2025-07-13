@@ -307,6 +307,14 @@
             </div>
             <div class="contacts__map-wrapper">
               <iframe class="contacts__map" src="https://www.google.com/maps?q=ул.+Большая+Конюшенная,+д.+19%2F8,+Санкт-Петербург&output=embed" width="800" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <picture>
+                <source width="1440" height="400" type="image/webp" media="(min-width: 1440px)" srcset="images/location-desktop@1x.webp 1x, images/location-desktop@2x.webp 2x">
+                <source width="768" height="400" type="image/webp" media="(min-width: 768px)" srcset="images/location-tablet@1x.webp 1x, images/location-tablet@2x.webp 2x">
+                <source width="320" height="362" type="image/webp" srcset="images/location-mobile@1x.webp 1x, images/location-mobile@2x.webp 2x">
+                <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/location-desktop@1x.jpg 1x, images/location-desktop@2x.jpg 2x">
+                <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/location-tablet@1x.jpg 1x, images/location-tablet@2x.jpg 2x">
+                <img class="contacts__map-image" width="320" height="362" src="images/location-mobile@1x.jpg" srcset="images/location-mobile@2x.jpg 2x" alt="Карта с месторасположением компании Cat Energy" loading="lazy">
+              </picture>
             </div>
           </div>
         </section>
